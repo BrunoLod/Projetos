@@ -1,0 +1,9 @@
+/* Definindo uma largura máxima que a tela pode possuir,    
+   de tal modo que caso a supere, defina o grid, contendo 
+   apenas duas colunas, como seus segmentos, aparecendo
+   dois cards apenas. */
+@media screen and (max-width: 1015px) {
+    .offer__list-item {
+      grid-template-columns: 1fr 1fr;
+    }
+  }

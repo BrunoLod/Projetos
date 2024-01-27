@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Imersão</title>
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="variaveis.css">
+    <link rel="stylesheet" href="main-content.css">
+    <link rel="stylesheet" href="media-queries.css">
+    <link rel="icon" href=C:\Users\Bruno\Documents\Alura\Assets\icons\favicon.png type="image/x-icon">
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css"
+        integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css"
+        integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous" />
+
+</head>
+
+<!-- A tag <div> serve como um recipiente de códigos, que nele 
+         estarão circunscritos. As classes que são criadas, como podem ser vistas, 
+         não provêm de algo intrínsecamente compreendido pelo código, mas sim que nós
+         podemos nomear; o seu papel, junto com o <div> está em nomear aquele segmento, 
+         para que no css, responsável por estilizar página, seja possível em tal porção 
+         trabalhar, adicionar estilos, interfirir no layout e afins. -->
+
+<!-- A tag <nav> é utilizada geralmente para agrupar links ou outros elementos
+         de navegação, como menus, barras de navegação e listas de links. Normalmente, 
+         o seu uso compreende a utilização das outras tags como <ul>, <li> e <a>, de tal modo 
+         que o primeiro abrange o conjunto de listas, o segundo as listas propriamente ditas e
+         o terceiro, enfim, é responsável por levar o usuário a uma outra página, quer seja do próprio 
+         site ou de outro. -->
+
+<!-- A tag <span> é uma tag de contêiner genérica, que é usada para aplicar estilos ou manipular 
+         partes específicas do conteúdo de um documento sem afetar a estrutura semântica do documento, 
+         não possuindo significado próprio, sendo geralmente usado em conjunto com o CSS, JavaScript e
+         outras tecnologias para fornecer estilos e/ou interatividade as partes específicas do texto 
+         ou do conteúdo. -->
+
+<!-- A tag <button> é usada para criar um botão interativo em uma página web, criando
+         botões que os usuários podem clicar para acionar ações ou enviar formulários. -->
+
+<!-- A tag <section> é como se fosse uma subdivisão da tag <div>, de tal modo que
+         em metáfora poderíamos compreender que a div é como se fosse a casa, enquanto 
+         que o section o cômodo da casa, agrupando o conteúdo que será exposto na página web
+         com uma estrutura mais clara e significativa.  -->
+
+<!-- Estarei identando o código de modo que visualmente consiga visualizar os blocos
+         dos códigos que servirão de base para a construnção da página web. -->
+
+<!-- A tag <p> para o HTML refere-se a um parágrafo, de tal modo que quando 
+         se passa um texto envolto a ela está se dizendo que esse faz parte de um parágrafo. -->
+
+<body>
+    <div class="sidebar">
+
+        <nav class="sidebar__navigation">
+            <div class="logo">
+                <a href="">
+                    <img src="C:\Users\Bruno\Documents\Alura\Imersão Alura\icons\logo-spotify.png" alt="Logo" />
+                </a>
+            </div>
+            <ul>
+                <li>
+                    <a href="">
+                        <span class="fa fa-home"></span>
+                        <span>Início</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="fa fa-search"></span>
+                        <span>Buscar</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="library">
+            <div class="library__content">
+                <button class="library__button">
+                    <span class="fa fas fa-book"></span>
+                    <span>Sua biblioteca</span>
+                </button>
+                <span class="fa fa-plus"></span>
+            </div>
+
+            <section class="section-playlist">
+
+                <div class="section-playlist__content">
+                    <span class="text title">Crie sua primeira playlist</span>
+                    <span class="text subtitle">É fácil, vamos te ajudar.</span>
+                    <button class="section-playlist__button">
+                        <span>Criar playlist</span>
+                    </button>
+                </div>
+
+            </section>
+
+            <section class="section-playlist">
+
+                <div class="section-playlist__content">
+                    <span class="text title">Quer encontrar um podcast?</span>
+                    <span class="text subtitle">É fácil, vamos te ajudar.</span>
+                    <button class="section-playlist__button">
+                        <span>Explorar podcasts</span>
+                    </button>
+                </div>
+
+            </section>
+
+            <div class="cookies">
+                <a href="">Cookies</a>
+            </div>
+            <div class="languages">
+                <button class="languages__button">
+                    <span class="fa fa-globe"></span>
+                    <span>Português do Brasil</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- A tag <main> é a tag semântica que se refere ao conteúdo 
+         principal do código. -->
+    <main>
+        <div class="main__container">
+            <nav class="header__navigation">
+                <div class="navigation">
+
+                    <button class="arrow-left">
+                        <img src="C:\Users\Bruno\Documents\Alura\Imersão Alura\icons\small-left.png"
+                            alt="seta esquerda">
+                    </button>
+                    <button class="arrow-right">
+                        <img src="C:\Users\Bruno\Documents\Alura\Imersão Alura\icons\small-right.png"
+                            alt="seta direita">
+                    </button>
+
+                    <div class="header__search">
+                        <img src="C:\Users\Bruno\Documents\Alura\Imersão Alura\icons\search.png" alt="">
+
+                        <!-- O "id" apresenta similar papel que o "class", porém, como se percebe, 
+                        é empregado, como uma boa prática, para um único item, e não para muitos para além dele. -->
+                        <input id="search-input" type="text" maxlength="800" placeholder="O que você quer ouvir?">
+                    </div>
+
+                    <div class="header__login">
+                        <button class="subscribe">Inscreva-se</button>
+                        <button class="login">Entrar</button>
+                    </div>
+
+                </div>
+            </nav>
+
+            <!-- Playlist -->
+            <div class="playlist-container">
+                <div id="result-playlist">
+                    <div class="playlist">
+                        <h1 id="greeting">Boas vindas</h1>
+                        <h2 class="session">Navegar por todas as seções</h2>
+                    </div>
+
+                    <!-- Lista de cards: -->
+                    <div class="offer__scroll-container">
+                        <div class="offer__list">
+
+                            <section class="offer__list-item">
+                                <!-- Item 1-->
+                                <a href="" class="cards">
+                                    <div class="cards card_1">
+                                        <img src="C:\Users\Bruno\Documents\Alura\Assets\playlist\1.jpeg" alt="">
+                                        <span>Boas Festas</span>
+                                    </div>
+                                </a>
+
+                                <!-- Item 2-->
+                                <a href="" class="cards">
+                                    <div class="cards card_2">
+                                        <img src="C:\Users\Bruno\Documents\Alura\Assets\playlist\6.jpeg" alt="">
+                                        <span>Podcasts</span>
+                                    </div>
+                                </a>
+
+                                <!-- Item 3-->
+                                <a href="" class="cards">
+                                    <div class="cards card_3">
+                                        <img src="C:\Users\Bruno\Documents\Alura\Assets\playlist\2.png" alt="">
+                                        <span>Feitos para você</span>
+                                    </div>
+                                </a>
+
+                                <!-- Item 4-->
+                                <a href="" class="cards">
+                                    <div class="cards card_4">
+                                        <img src="C:\Users\Bruno\Documents\Alura\Assets\playlist\4.jpeg" alt="">
+                                        <span>Creators</span>
+                                    </div>
+                                </a>
+
+                                <!-- Item 5-->
+                                <a href="" class="cards">
+                                    <div class="cards card_5">
+                                        <img src="C:\Users\Bruno\Documents\Alura\Assets\playlist\5.jpeg" alt="">
+                                        <span>Phonks para treinar</span>
+                                    </div>
+                                </a>
+
+                                <!-- Item 6-->
+                                <a href="" class="cards">
+                                    <div class="cards card_6">
+                                        <img src="C:\Users\Bruno\Documents\Alura\Assets\playlist\9.jpeg" alt="">
+                                        <span>Hits de cria</span>
+                                    </div>
+                                </a>
+
+                                <!-- Item 7-->
+                                <a href="" class="cards">
+                                    <div class="cards card_7">
+                                        <img src="C:\Users\Bruno\Documents\Alura\Assets\playlist\7.jpeg" alt="">
+                                        <span>Som dos patriotas</span>
+                                    </div>
+                                </a>
+
+                                <!-- Item 8-->
+                                <a href="" class="cards">
+                                    <div class="cards card_8">
+                                        <img src="C:\Users\Bruno\Documents\Alura\Assets\playlist\8.jpeg" alt="">
+                                        <span>Aquele pagode</span>
+                                    </div>
+                                </a>
+
+                                <!-- Item 9-->
+                                <a href="" class="cards">
+                                    <div class="cards card_9">
+                                        <img src="C:\Users\Bruno\Documents\Alura\Assets\playlist\3.jpeg" alt="">
+                                        <span>Lançamentos</span>
+                                    </div>
+                                </a>
+
+                                <!-- Item 10-->
+                                <a href="" class="cards">
+                                    <div class="cards card_10">
+                                        <img src="C:\Users\Bruno\Documents\Alura\Assets\playlist\10.jpeg" alt="">
+                                        <span>MPB para os "cults"</span>
+                                    </div>
+                                </a>
+
+                                <!-- Item 11-->
+                                <a href="" class="cards">
+                                    <div class="cards card_11">
+                                        <img src="C:\Users\Bruno\Documents\Alura\Assets\playlist\11.jpeg" alt="">
+                                        <span>Rocks da turma de preto</span>
+                                    </div>
+                                </a>
+
+                                <!-- Item 12-->
+                                <a href="" class="cards">
+                                    <div class="cards card_12">
+                                        <img src="C:\Users\Bruno\Documents\Alura\Assets\playlist\12.jpeg" alt="">
+                                        <span>Rapzão da massa</span>
+                                    </div>
+                                </a>
+
+                                <!-- Item 13-->
+                                <a href="" class="cards">
+                                    <div class="cards card_13">
+                                        <img src="C:\Users\Bruno\Documents\Alura\Assets\playlist\13.jpeg" alt="">
+                                        <span>Indie para os diferentes</span>
+                                    </div>
+                                </a>
+
+                                <!-- Item 14-->
+                                <a href="" class="cards">
+                                    <div class="cards card_14">
+                                        <img src="C:\Users\Bruno\Documents\Alura\Assets\playlist\revoada.jpg" alt="">
+                                        <span>Indie rock para os emos</span>
+                                    </div>
+                                </a>
+
+                                <!-- Item 15-->
+                                <a href="" class="cards">
+                                    <div class="cards card_15">
+                                        <img src="C:\Users\Bruno\Documents\Alura\Assets\playlist\14.jpeg" alt="">
+                                        <span>Para relaxar</span>
+                                    </div>
+                                </a>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="result-artist" class="hidden">
+                    <div class="grid-container">
+                        <div class="artist-card" id="">
+
+                            <div class="card-img">
+
+                                <img id="artist-img" class="artist-img" />
+                                <div class="play">
+                                    <span class="fa fa-solid fa-play"></span>
+                                </div>
+
+                                <div class="card-text">
+                                    <a title="Midnight Cereal" class="vst" href=""></a>
+                                    <span class="artist-name" id="artist-name"></span>
+                                    <span class="artist-categorie">Artista</span>
+                                    </a>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- A tag footer é utilizada para referenciar o rodapé 
+         da página, compreendendo geralmente informações do site 
+         e coisas relacionadas. -->
+
+    <footer class="disclaimer-premium">
+
+        <div class="text">
+            <p class="disclaimer-premium__title">Teste o Premium de graça</p>
+            <p class="disclaimer-premium__subtitle">
+                Inscreva-se para curtir músicas ilimitadas e podcasts só com
+                alguns anúncios, não precisa de cartão de crédito.
+            </p>
+        </div>
+        <div class="button">
+            <button type="button">Inscreva-se, é grátis</button>
+        </div>
+
+    </footer>
+    <script src="script.js" type="text/javascript"></script>
+    <script src="search.js" type="text/javascript"></script>
+</body>
+
+</html>
